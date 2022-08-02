@@ -2,8 +2,9 @@
 
 @section('content_page')
     <button><a class="text-decoration-none" href=" {{ route('comics.create') }}">Add Comic</a></button>
-    <ul class="list-unstyled d-flex">
-        @foreach ($comics as $comic)
+
+    @foreach ($comics as $comic)
+        <ul class="list-unstyled d-flex">
             <li class="p-3">{{ $comic['title'] }}|</li>
             <li class="p-3">{{ $comic['description'] }}|</li>
             <li class="p-3">{{ $comic['price'] }}|</li>
@@ -15,6 +16,6 @@
                             d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                     </svg></a>
             </li>
-        @endforeach
-    </ul>
+        </ul>
+    @endforeach
 @endsection
