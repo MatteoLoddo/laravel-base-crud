@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content_page')
-    <h1>ciao</h1>
+<a href="{{route('comics.index')}}">I nostri Fumetti</a>
 @endsection
