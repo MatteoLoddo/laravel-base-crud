@@ -36,8 +36,21 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
-        //
+        $data = $request->all();
+
+        $nuovoComic = new Comic();
+        $nuovoComic->title = $data['title'];
+        $nuovoComic->description = $data['description'];
+        $nuovoComic->thumb = $data['thumb'];
+        $nuovoComic->price = $data['price'];
+        $nuovoComic->series = $data['series'];
+        $nuovoComic->sales_date = $data['sale_date'];
+        $nuovoComic->type = $data['type'];
+        $nuovoComic->artist = $data['artist'];
+        $nuovoComic->writers = $data['writers'];
+        $nuovoComic->save();
     }
 
     /**

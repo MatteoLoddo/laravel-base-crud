@@ -18,7 +18,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-
+// rotta pagina principale dei fumetti
 Route::get('/comics', 'ComicController@index')->name('comics.index');
+// rotta pagina per creare un nuovo fumetto
 Route::get('/comics/create' , 'ComicController@create')->name('comics.create');
+// rotta per visualizzare un singolo fumetto
 Route::get('/comics/{comic}', 'ComicController@show')->name('comics.show');
+// rotta per salvare i nuovi fumetti inseriti
+Route::Post('/comics', 'ComicController@store')->name('comics.store');

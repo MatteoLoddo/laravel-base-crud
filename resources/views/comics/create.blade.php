@@ -2,7 +2,7 @@
 
 @section('content_page')
     <div>
-        <form action="">
+        <form action="{{ route('comics.store')}} " method="post">
           @csrf
             {{-- input TITOLO --}}
             <div>
