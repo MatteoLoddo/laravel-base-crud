@@ -24,5 +24,14 @@ Route::get('/comics', 'ComicController@index')->name('comics.index');
 Route::get('/comics/create' , 'ComicController@create')->name('comics.create');
 // rotta per visualizzare un singolo fumetto
 Route::get('/comics/{comic}', 'ComicController@show')->name('comics.show');
+
+ROute::get('/comics/{comic}/edit' , 'ComicController@edit')->name("comics.edit");
+Route::patch('/comics/{comic}' , 'ComicController@update')->name('comics.update');
+
+
+
+
+
 // rotta per salvare i nuovi fumetti inseriti
 Route::Post('/comics', 'ComicController@store')->name('comics.store');
+
